@@ -9,3 +9,17 @@
 
 - name: Installs latest available version of bundler.
   gem: name=bundler state=latest
+
+- name: Add bash_profile_for_rbenv1
+  sudo: yes
+  shell: echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+
+- name: Add bash_profile_for_rbenv2
+  sudo: yes
+  shell: echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
+
+- name: Install Rails
+  sudo: yes
+  command: gem install rails --no-rdoc --no-ri
+  environment:
+    PATH: "/usr/local/bin:{{ ansible_env.PATH }}"
