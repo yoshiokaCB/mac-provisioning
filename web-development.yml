@@ -5,7 +5,9 @@
   roles:
     - homebrew
     - homebrew-cask
+    - sge-compile
     - ruby-build
+    - gem-install
   vars:
     # Tap external Homebrew repositories.
     #
@@ -63,4 +65,3 @@
       - sequel-pro
       - mi
       - skype
-
