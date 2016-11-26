@@ -3,9 +3,7 @@
   gather_facts: no
   sudo: no
   roles:
-    - homebrew
     - homebrew-cask
-    - sge-compile
     - ruby-build
     - gem-install
   vars:
@@ -37,10 +35,10 @@
       - mysql
       - postgresql
       - imagemagick
-      - sdl
-      - sdl_image
-      - sdl_mixer
-      - sdl_ttf
+      #- sdl
+      #- sdl_image
+      #- sdl_mixer
+      #- sdl_ttf
 
     # Tap external Homebrew Cask repositories.
     homebrew_cask_repositories:
@@ -65,3 +63,7 @@
       - sequel-pro
       - mi
       - skype
+      - slack
+      - iterm2
+      - evernote
+      - dropbox

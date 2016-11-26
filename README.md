@@ -13,16 +13,24 @@ example
 ```
 $ xcode-select --install
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-$ brew install caskroom/cask/brew-cask
+$ brew tap caskroom/cask
 $ brew update
 $ brew install ansible
 $ echo 'export HOMEBREW_CASK_OPTS="--appdir=/Applications"' >> ~/.bash_profile
 $ mkdir ~/.provisioning && cd $_
-$ git clone https://github.com/yoshiokaCB/ansible-playbook.git
+$ git clone https://github.com/yoshiokaCB/mac-provisioning.git
 ```
 
 ```
-$ ansible-playbook -i hosts -vv ~/.provisioning/ansible-playbook/general.yml
+$ brew install readline openssl ansible git rbenv ruby-build vim mysql postgresql imagemagick
+$ brew cask install firefox google-chrome atom vagrant virtualbox sourcetree sequel-pro mi skype slack iterm2 evernote dropbox
+$ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+$ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+$ rbenv install 2.3.3
+```
+
+```
+$ ansible-playbook -i hosts -vv ~/.provisioning/mac-provisioning/web-development.yml
 ```
 
 

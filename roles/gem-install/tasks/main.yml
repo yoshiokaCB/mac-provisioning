@@ -10,11 +10,3 @@
 - name: Install Rails
   sudo: no
   shell: bash -lc "gem install rails"
-
-- name: Install smalruby
-  sudo: no
-  shell: bash -lc "gem install smalruby"
-
-- name: Install smalruby-editor
-  sudo: no
-  shell: bash -lc "gem install smalruby-editor"

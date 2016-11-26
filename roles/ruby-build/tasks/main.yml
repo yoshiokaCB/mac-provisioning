@@ -13,10 +13,6 @@
   register: result
   changed_when: '"Installed ruby" in result.stderr'
 
-- name: test
-  sudo: no
-  shell: echo "hogehoge" >> test
-
 - name: Switch to latest stable version of Ruby
   shell: rbenv global $(rbenv install -l | grep -v - | tail -1)
 

@@ -1,4 +1,0 @@
----
-- name: test
-  sudo: no
-  shell: echo "hogehoge" >> test
