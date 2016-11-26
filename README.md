@@ -27,6 +27,7 @@ $ brew cask install firefox google-chrome atom vagrant virtualbox sourcetree seq
 $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
 $ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 $ rbenv install 2.3.3
+$ echo 'gem: --no-ri --no-rdoc' >> ~/.gemrc
 ```
 
 ```
